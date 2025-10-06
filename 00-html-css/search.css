@@ -110,10 +110,10 @@ main {
   margin: 0 1rem;
 }
 
-@media (width >=1024px) {
+@media (min-width: 1566px) {
   main {
     margin: 0 auto;
-    max-width: 1800px;
+    max-width: 1536px;
   }
 }
 
@@ -145,7 +145,7 @@ select {
   border: none;
   outline: none;
   color: var(--text-primary);
-  padding: 0.5rem 1rem;
+  padding: 0.75rem 1rem;
   font-family: inherit;
   border-radius: 0.5rem;
 }
@@ -232,7 +232,6 @@ article button {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: auto auto;
-    gap: 1rem;
     grid-template-areas:
       "header header button"
       "description description .";
@@ -255,5 +254,33 @@ article button {
     max-width: max-content;
     align-self: self-start;
     justify-self: self-end;
+  }
+}
+
+body>footer {
+  display: flex;
+  gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  align-items: center;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  li {
+    background: transparent;
+    outline: none;
+    color: var(--text-primary);
+    padding: 0.4rem 1rem;
+    border-radius: 0.5rem;
+
+    &:focus,
+    &:hover {
+      background-color: var(--primary-light);
+    }
   }
 }
