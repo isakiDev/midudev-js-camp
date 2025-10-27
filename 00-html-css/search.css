@@ -241,6 +241,9 @@ article button {
     grid-area: header;
   }
 
+  /* Uso `display: contents` para que los elementos hijos del footer participen directamente
+     en el grid del artículo, sin que el footer cree una caja adicional propia. 
+     Esto nos permite asignar grid-areas a <p> y <button> como si fueran hijos directos del grid. */
   article footer {
     display: contents;
   }
